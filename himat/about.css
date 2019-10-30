@@ -1,0 +1,55 @@
+﻿html {
+  box-sizing: border-box;
+}
+
+body{
+    background-color:silver;
+}
+
+img{
+    border:2px outset white;
+    border-radius:100%;
+    margin-right:10px;
+}
+
+a{
+    padding:10px;
+    border:2px outset red;
+    border-radius:15px;
+    text-decoration:none;
+    color:#000000;
+}
+
+a:hover{
+    border:2px outset black;
+    color:#ff0000;
+}
+.row{
+  margin-top: 15px;
+  display: table;
+}
+.column {
+  display: table-cell;
+float: left;
+  width: 25%;
+}
+
+.card {
+	border-radius:25px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
+}
+
+@media only screen and (max-width: 751px) {
+  .column {
+    width: 50%;
+  }
+}
+
+.container {
+  padding: 0 16px;
+}
+
+
+.title {
+  color: grey;
+}

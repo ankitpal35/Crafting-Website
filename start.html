@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+*{margin:0;}
+.button {
+cursor : pointer;
+		position: absolute; 
+		top: 40%; 
+		right:35%;
+        background-color: #808080;
+        border:10px double #FFFFFF;
+        border-radius:25%; 
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 38px;
+        padding: 20px;
+		width: 30%; 		
+        height: 100px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.mySlides {display:none;
+   position:fixed;
+   width:100%;
+   height:100%;
+   overflow:hidden;
+}
+
+.mySlides > img{
+   position:absolute;
+   width:100%;
+   height:100%;
+}
+</style>
+</head>
+<body>
+
+<div class="mySlides">
+  <img src="himat\images\background\a3.jpg" height="100%" width="100%">
+</div>
+
+
+<div class="mySlides">
+  <img src="himat\images\background\b20.jpg" height="100%" width="100%">
+</div>
+
+<div class="mySlides">
+  <img src="himat\images\background\a10.jpg" height="100%" width="100%">
+</div>
+
+<div class="mySlides">
+  <img src="himat\images\background\b2.jpg" height="100%" width="100%">
+</div>
+
+
+<div class="mySlides">
+  <img src="himat\images\background\b3.jpg" height="100%" width="100%">
+</div>
+
+
+<div class="mySlides">
+  <img src="himat\images\background\b18.png" height="100%" width="100%">
+</div>
+
+
+<div class="mySlides">
+  <img src="himat\images\background\b19.png" height="100%" width="100%">
+</div>
+
+<a href="himat/main.html"><button class="button"><span>Enter </span></button></a>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    slides[slideIndex-1].style.display = "block";  
+
+    setTimeout(showSlides, 1000); 
+}
+</script>
+
+</body>
+</html> 
